@@ -19,6 +19,6 @@ Route::get('teacher/{id}',['as' =>'teacherId','uses'=>'TeacherController@Teacher
 
 Route::get('no',['as'=>'notFound','uses'=>'notFoundController@error']);
 
-Route::get('teacher/register',['as'=>'SignUpTeacher','uses'=>'TeacherController@TeacherView']);
+Route::get('signup',['as'=>'signUp','uses'=>'TeacherController@SignUp']);
 
 //Route::post('teacher/create',['as'=>'registerTeacher','uses'=>'TeacherController@RegisterTeacher']);

@@ -18,15 +18,15 @@ class TeacherController extends BaseController {
 		return View::make('TeacherId');
 	}
 
-	public function TeacherView(){
-		dd('asd');
-		//return View::make('createTeacher');
+	public function SignUp(){
+		return View::make('createTeacher');
 	}
+/*
 	public function RegisterTeacher(){
 		$teacher=$this->docenteRepo->newDocente();
 		$manager=new teacherManager($teacher,Input::all());
 		$manager->save();
 		return Redirect::route('home');
 	}
-
+*/
 }

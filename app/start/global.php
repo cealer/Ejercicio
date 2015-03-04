@@ -51,7 +51,7 @@ App::error(function(Exception $exception, $code)
 	Log::error($exception);
 });
 
-App::error(function (\HireMe\Managers\ValidationException $exception) {
+App::error(function (\RegistroDocente\Managers\ValidationException $exception) {
     return Redirect::back()->withInput()->withErrors($exception->getErrors());
 });
 

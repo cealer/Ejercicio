@@ -7,8 +7,7 @@ class teacherManager extends BaseManager
 	function getRules()
 	{
 		$rules=[
-				'FirstName'=>'required',
-				'LastName'=>'required',
+				'full_name'=>'required',
 				'Amount'=>'required|min:0',
 				'StartMonth'=>'required',
 				'EndMonth'=>'required',
@@ -17,4 +16,5 @@ class teacherManager extends BaseManager
 				];
 		return $rules;
 	}
+
 }

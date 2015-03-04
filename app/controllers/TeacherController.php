@@ -20,15 +20,18 @@ class TeacherController extends BaseController {
 	}
 
 	public function SignUp(){
-		return View::make('createTeacher');
+		$month  = \Lang::get('utils.month');
+		return View::make('createTeacher',compact('month'));
 	}
 
 	public function RegisterTeacher(){
+
 
 		$teacher=$this->docenteRepo->newDocente();
 		$manager=new teacherManager($teacher,Input::all());
 		$manager->save();
 		return Redirect::route('home');
+
 	
 	}
 

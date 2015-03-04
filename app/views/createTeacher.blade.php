@@ -14,8 +14,8 @@
             
             {{ Field::text('full_name') }}
             {{ Field::text('Amount') }}
-            {{ Field::text('StartMonth') }}
-            {{ Field::text('EndMonth') }}
+            {{ Field::selectMonth('StartMonth') }}
+            {{ Field::selectMonth('EndMonth') }}
             {{ Field::text('Number') }}
             {{ Field::text('Quotas') }}
 

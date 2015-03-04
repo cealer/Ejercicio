@@ -115,6 +115,18 @@ class FieldBuilder {
 
         return $this->view->make($template, compact ('name', 'label', 'control', 'error'));
     }
+    
+    public function selectMonth($name, $selected = null, $options = array(), $format = '%B')
+    {
+        $months = array();
+
+        foreach (range(1, 12) as $month)
+        {
+            $months[$month] = strftime($format, mktime(0, 0, 0, $month, 1));
+        }
+
+        return $this->select($name, $months, $selected, $options);
+    }
 
     public function password($name, $attributes = array())
     {

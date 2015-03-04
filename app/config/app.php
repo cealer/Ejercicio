@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => false,
+	'debug' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -119,7 +119,11 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'Way\Generators\GeneratorsServiceProvider'
+		//vendor
+		'Way\Generators\GeneratorsServiceProvider',
+
+        // Custom
+        'RegistroDocente\Components\FieldServiceProvider'
 
 	),
 
@@ -186,7 +190,9 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+  	// Custom
 
+        'Field'           => 'RegistroDocente\Components\Field'
 	),
 
 );

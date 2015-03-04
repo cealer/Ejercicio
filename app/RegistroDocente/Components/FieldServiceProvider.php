@@ -1,12 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: silence
- * Date: 5/20/14
- * Time: 8:35 PM
- */
 
-namespace HireMe\Components;
+namespace RegistroDocente\Components;
 
 use Illuminate\Support\ServiceProvider;
 

@@ -2,6 +2,7 @@
 
 use RegistroDocente\Repositories\DocenteRepo;
 use RegistroDocente\Managers\teacherManager;
+
 class TeacherController extends BaseController {
 
 	protected $docenteRepo;
@@ -21,12 +22,15 @@ class TeacherController extends BaseController {
 	public function SignUp(){
 		return View::make('createTeacher');
 	}
-/*
+
 	public function RegisterTeacher(){
+
 		$teacher=$this->docenteRepo->newDocente();
 		$manager=new teacherManager($teacher,Input::all());
 		$manager->save();
 		return Redirect::route('home');
+	
 	}
-*/
+
+
 }

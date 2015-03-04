@@ -1,4 +1,4 @@
-<?php namespace HireMe\Components;
+<?php namespace RegistroDocente\Components;
 
 use Illuminate\Support\Facades\Facade;
 

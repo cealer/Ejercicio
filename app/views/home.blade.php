@@ -5,18 +5,14 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
     <div class="container">
-        <h1>Docentes</h1>
+        <h1>App de préstamo para docentes</h1>
         <p>
-            Proyecto que estamos construyendo con Laravel para el curso profesional
-            de PHP y Laravel de Mejorando.la:
-            <a href="https://mejorando.la/cursos/php-laravel">
-                https://mejorando.la/cursos/php-laravel
-            </a>
+            Proyecto de préstamo
         </p>
       
         <p>
-            <a href='' class="btn btn-primary btn-lg" role="button">
-                Postúlate &raquo;
+            <a href='{{ route('signUp') }}' class="btn btn-primary btn-lg" role="button">
+                Solicitar préstamo &raquo;
             </a>
         </p>
      

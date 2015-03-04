@@ -20,7 +20,7 @@
             {{ Field::text('Quotas') }}
 
             <p>
-                <input type="submit" value="Register" class="btn btn-success">
+                <input type="submit" value="Registrar" class="btn btn-success">
             </p>
 
             {{ Form::close() }}

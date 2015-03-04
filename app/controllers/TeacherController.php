@@ -2,7 +2,7 @@
 
 use RegistroDocente\Repositories\DocenteRepo;
 use RegistroDocente\Managers\teacherManager;
-
+use RegistroDocente\Script\calcular;
 class TeacherController extends BaseController {
 
 	protected $docenteRepo;
@@ -16,7 +16,11 @@ class TeacherController extends BaseController {
 	}
 
 	public function TeacherId($id){
-		return View::make('TeacherId');
+		$teacher = $this->docenteRepo->find($id);
+		//$cuotas=Calcular($teacher->Amount,$teacher->StartMonth,$teacher->EndMonth,$teacher->Number);
+		//$cuotas=new calcular();
+		//$this->notFoundUnless($category);
+		return View::make('TeacherId',compact('teacher','cuotas'));
 	}
 
 	public function SignUp(){

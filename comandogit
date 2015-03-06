@@ -1,0 +1,12 @@
+git commint -am "mensaje" graba todo y añade el commit
+git log --oneline --graph --all muestra graficamente el avanze del proyecto
+git config --global alias.nicelog "comando"
+git config --global alias.nicelog "log --oneline --graph --all"
+git merge [branch]
+git branch --merged ver las fusiones
+git branch -d [branch] borra una rama
+git clone [url del proyecto en github]
+touch crear archivos
+añadir tu pc
+git remote add origin https://github.com/cealer/repomejorandola.git
+git remote -v

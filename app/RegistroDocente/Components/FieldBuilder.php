@@ -127,7 +127,6 @@ class FieldBuilder {
 
         return $this->select($name, $months, $selected, $options);
     }
-
     public function password($name, $attributes = array())
     {
         return $this->input('password', $name, null, $attributes);
@@ -137,6 +136,18 @@ class FieldBuilder {
     {
         return $this->input('select', $name, $value, $attributes, $options);
     }
+
+    public function inputEndMonth($type, $name, $value = null, $attributes = array(), $options = array())
+    {
+        $this->buildCssClasses($type, $attributes);
+        $label = $this->buildLabel($name);
+        $control = $this->buildControl($type, $name, $value, $attributes, $options);
+        $error = $this->buildError($name);
+        $template = $this->buildTemplate($type);
+
+        return $this->view->make($template, compact ('name', 'label', 'control', 'error'));
+    }
+    
 
     public function __call($method, $params)
     {

@@ -9,12 +9,16 @@ class teacherManager extends BaseManager
 		$rules=[
 				'full_name'=>'required',
 				'Amount'=>'required|min:0',
-				'StartMonth'=>'required',
-				'EndMonth'=>'required',
+				'StartMonth'=>'required|min:0',
 				'Number'=>'required|min:0',
-				'Quotas'=>'required|min:0'
 				];
 		return $rules;
 	}
-
+/*
+	    public function prepareData($data)
+    {
+         $data['EndMonth'] = 1;
+        return $data;
+    }
+*/
 }

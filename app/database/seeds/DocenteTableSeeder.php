@@ -14,8 +14,6 @@ class DocenteTableSeeder extends Seeder {
 				'full_name'=>$faker->name,
 				'Amount'=>$faker->numberBetween,
 				'StartMonth'=>$faker->monthName,
-				'EndMonth'=>$faker->monthName,
-				'Quotas'=>$faker->numberBetween,
 				'Number'=>$faker->randomDigit
 			]);
 		}

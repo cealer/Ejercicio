@@ -15,10 +15,7 @@
             {{ Field::text('full_name') }}
             {{ Field::text('Amount') }}
             {{ Field::selectMonth('StartMonth') }}
-            {{ Field::selectMonth('EndMonth') }}
             {{ Field::text('Number') }}
-            {{ Field::text('Quotas') }}
-
             <p>
                 <input type="submit" value="Registrar" class="btn btn-success">
             </p>

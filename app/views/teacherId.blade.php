@@ -23,13 +23,12 @@
         <tr>
             <td>{{$teacher->full_name}}</td>
             <td>{{$teacher->Amount}}</td>
-            <td>{{$teacher->StartMonth}}</td>
-            <td>{{$teacher->EndMonth}}</td>
+            <td>{{$cuotas->ImprimirMes($teacher->StartMonth)}}</td>
+            <td>{{$cuotas->ImprimirMes(end($mes))}}</td>
              <td>{{$teacher->Number}}</td> 
         </tr>
         </tbody>
     </table>
-
     <table class="table table-striped">
         <tbody> 
             <h2>Total de cuotas</h2>
@@ -42,7 +41,7 @@
             </thead>
             @foreach ($cal as $index=>$value)
             <tr>
-             <td>{{$value}}</td>
+             <td>S/. {{$value}}</td>
              <td>{{$cuotas->ImprimirMes($mes[$index]);  }}</td>
             </tr>
             @endforeach

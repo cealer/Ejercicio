@@ -17,10 +17,9 @@ class CreateDocentesTable extends Migration {
 			$table->increments('id');
 			$table->string('full_name');
 			$table->decimal('Amount');
-			$table->string('StartMonth');
-			$table->string('EndMonth');
+			$table->integer('StartMonth');
+			$table->integer('EndMonth');
 			$table->integer('Number');
-			$table->decimal('Quotas');
 			$table->timestamps();
 		});
 	}

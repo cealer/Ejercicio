@@ -65,8 +65,6 @@ class calcular{
 			case 12:
 				return "Diciembre";
 				break;
-
-			
 			default:
 				return "Mes no valido";
 				break;

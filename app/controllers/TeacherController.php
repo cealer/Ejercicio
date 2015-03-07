@@ -30,15 +30,10 @@ class TeacherController extends BaseController {
 	}
 
 	public function RegisterTeacher(){
-
-
+		$cuotas=new calcular();
 		$teacher=$this->docenteRepo->newDocente();
 		$manager=new teacherManager($teacher,Input::all());
 		$manager->save();
 		return Redirect::route('home');
-
-	
 	}
-
-
 }

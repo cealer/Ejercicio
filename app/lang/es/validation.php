@@ -103,9 +103,7 @@ return array(
         'category_id' => 'Categoría',
         'Amount' => 'Monto',
         'StartMonth' => 'Mes inicial',
-        'EndMonth'=> 'último mes',
         'Number' => 'Número de cuotas',
-        'Quotas' =>'Cuotas',
 	),
 
 );

@@ -17,10 +17,11 @@ class TeacherController extends BaseController {
 
 	public function TeacherId($id){
 		$teacher = $this->docenteRepo->find($id);
-		//$cuotas=Calcular($teacher->Amount,$teacher->StartMonth,$teacher->EndMonth,$teacher->Number);
-		//$cuotas=new calcular();
+		$cuotas=new calcular();
+		$cal=$cuotas->Cuotas($teacher->Amount,$teacher->Number);
+		$mes=$cuotas->Mes($teacher->StartMonth,$teacher->Number);
 		//$this->notFoundUnless($category);
-		return View::make('TeacherId',compact('teacher','cuotas'));
+		return View::make('TeacherId',compact('teacher','cuotas','cal','mes'));
 	}
 
 	public function SignUp(){

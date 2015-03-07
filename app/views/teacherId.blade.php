@@ -12,43 +12,41 @@
     <table class="table table-striped">
         <thead>
         <tr>
-
             <th>Nombre</th>
             <th>Monto</th>
             <th>Mes inicial</th>
             <th>Mes final</th>
             <th>Cuotas</th>
-            <th>Total de cuotas</th>
-        
         </tr>
         </thead>
         <tbody>
-
         <tr>
-
             <td>{{$teacher->full_name}}</td>
             <td>{{$teacher->Amount}}</td>
             <td>{{$teacher->StartMonth}}</td>
             <td>{{$teacher->EndMonth}}</td>
              <td>{{$teacher->Number}}</td> 
-
-            <td width="50">
-                <a href="" class="btn btn-info">
-                    Ver
-                </a>
-            </td>
         </tr>
         </tbody>
     </table>
 
     <table class="table table-striped">
-        
         <tbody> 
+            <h2>Total de cuotas</h2>
+           <!-- Foreach usado de esta forma para poder llamar al otro array ya que los dos tienen el mismo rango -->
+            <thead>
+                <tr>
+                    <th>Cuota a pagar</th>
+                    <th>Mes a pagar</th>
+                </tr>
+            </thead>
+            @foreach ($cal as $index=>$value)
             <tr>
-             <td></td>
-        </tr>
+             <td>{{$value}}</td>
+             <td>{{$cuotas->ImprimirMes($mes[$index]);  }}</td>
+            </tr>
+            @endforeach
         </tbody>
-
     </table>
 </div> <!-- /container -->
 

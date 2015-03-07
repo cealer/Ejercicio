@@ -3,6 +3,7 @@
 use RegistroDocente\Repositories\DocenteRepo;
 use RegistroDocente\Managers\teacherManager;
 use RegistroDocente\Script\calcular;
+use RegistroDocente\Entities\Docente;
 class TeacherController extends BaseController {
 
 	protected $docenteRepo;
@@ -12,7 +13,9 @@ class TeacherController extends BaseController {
 	}
 
 	public function listTeacher(){
-	return View::make('listTeacher');
+	$docentes=$this->docenteRepo->lista();
+	$docente=Docente::paginate();
+	return View::make('listTeacher',compact('docentes','docente'));
 	}
 
 	public function TeacherId($id){

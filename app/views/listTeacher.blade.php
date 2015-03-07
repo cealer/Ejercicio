@@ -14,40 +14,39 @@
 
 <div class="container">
     <h1>Últimos candidatos</h1>
-
+    
     <h2> </h2>
 
     <table class="table table-striped">
         <thead>
         <tr>
             <th>Nombre</th>
-            <th>Tipo de trabajo</th>
-            <th>Descripción</th>
+            <th>Monto</th>
+            <th>Mes inicial</th>
+            <th>Mes final</th>
+            <th>Cuotas</th>
             <th>Ver</th>
         </tr>
         </thead>
         <tbody>
         
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            @foreach($docentes as $value)
+            <td>{{$value->full_name}}</td>
+            <td>S/. {{$value->Amount}}</td>
+            <td>{{$value->StartMonth}}</td>
+            <td>{{$value->EndMonth}}</td>
+            <td>{{$value->Number}}</td>
             <td width="50">
-                <a href="" class="btn btn-info">
+                <a href="{{route('teacherId',[$value->id])}}" class="btn btn-info">
                     Ver
                 </a>
             </td>
         </tr>
-
-
+        @endforeach    
         </tbody>
     </table>
-    <p>
-        <a href="">
-            Ver todos en 
-        </a>
-    </p>
-    
+    <center>{{ $docente->links() }} </center> 
 </div> <!-- /container -->
 
 @stop

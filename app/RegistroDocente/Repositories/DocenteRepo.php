@@ -17,4 +17,21 @@ class DocenteRepo extends BaseRepo {
         return $docente;
     }
 
+
+    public function lista()
+    {
+        return Docente::get()->take(10);
+    }
+/*
+    public function findLatest($take = 10)
+    {
+        return Category::with([
+            'candidates' => function ($q) use ($take) {
+                    $q->take($take);
+                    $q->orderBy('created_at', 'DESC');
+                },
+            'candidates.user'
+        ])->get();
+    }
+*/
 } 

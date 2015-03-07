@@ -4,6 +4,7 @@ use RegistroDocente\Repositories\DocenteRepo;
 use RegistroDocente\Managers\teacherManager;
 use RegistroDocente\Script\calcular;
 use RegistroDocente\Entities\Docente;
+
 class TeacherController extends BaseController {
 
 	protected $docenteRepo;
@@ -15,15 +16,18 @@ class TeacherController extends BaseController {
 	public function listTeacher(){
 	$docentes=$this->docenteRepo->lista();
 	$docente=Docente::paginate();
+	$cuotas=new calcular();
 	return View::make('listTeacher',compact('docentes','docente'));
 	}
 
 	public function TeacherId($id){
+
 		$teacher = $this->docenteRepo->find($id);
+		$this->notFoundUnless($teacher);
 		$cuotas=new calcular();
 		$cal=$cuotas->Cuotas($teacher->Amount,$teacher->Number);
 		$mes=$cuotas->Mes($teacher->StartMonth,$teacher->Number);
-		//$this->notFoundUnless($category);
+		
 		return View::make('TeacherId',compact('teacher','cuotas','cal','mes'));
 	}
 

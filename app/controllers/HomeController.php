@@ -1,5 +1,6 @@
 <?php
-
+use RegistroDocente\Repositories\DocenteRepo;
+use RegistroDocente\Script\calcular;
 class HomeController extends BaseController {
 
 	/*
@@ -15,9 +16,18 @@ class HomeController extends BaseController {
 	|
 	*/
 
+	protected $docenteRepo;
+
+    public function __construct(DocenteRepo $docenteRepo)
+    {
+        $this->docenteRepo = $docenteRepo;
+    }
+
 	public function index()
-	{
-		return View::make('home');
+	{	
+		$latest_docentes = $this->docenteRepo->findLatest();
+		$cuotas=new calcular();	
+		return View::make('home',compact('latest_docentes','cuotas'));
 	}
 
 }

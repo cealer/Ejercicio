@@ -23,7 +23,6 @@
             <th>Nombre</th>
             <th>Monto</th>
             <th>Mes inicial</th>
-            <th>Mes final</th>
             <th>Cuotas</th>
             <th>Ver</th>
         </tr>
@@ -34,8 +33,7 @@
             @foreach($docentes as $value)
             <td>{{$value->full_name}}</td>
             <td>S/. {{$value->Amount}}</td>
-            <td>{{$value->StartMonth}}</td>
-            <td>{{$value->EndMonth}}</td>
+            <td>{{ $cuotas->ImprimirMes( $value->StartMonth ) }}</td>
             <td>{{$value->Number}}</td>
             <td width="50">
                 <a href="{{route('teacherId',[$value->id])}}" class="btn btn-info">

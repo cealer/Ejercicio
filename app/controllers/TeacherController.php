@@ -17,7 +17,7 @@ class TeacherController extends BaseController {
 	$docentes=$this->docenteRepo->lista();
 	$docente=Docente::paginate();
 	$cuotas=new calcular();
-	return View::make('listTeacher',compact('docentes','docente'));
+	return View::make('listTeacher',compact('docentes','docente','cuotas'));
 	}
 
 	public function TeacherId($id){

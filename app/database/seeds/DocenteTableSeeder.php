@@ -8,7 +8,7 @@ class DocenteTableSeeder extends Seeder {
 	public function run()
 	{
 		$faker = Faker::create();
-		foreach(range(1, 80) as $index)
+		foreach(range(1, 20) as $index)
 		{
 			Docente::create([
 				'full_name'=>$faker->name,

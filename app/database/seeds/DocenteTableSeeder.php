@@ -13,7 +13,7 @@ class DocenteTableSeeder extends Seeder {
 			Docente::create([
 				'full_name'=>$faker->name,
 				'Amount'=>$faker->numberBetween,
-				'StartMonth'=>$faker->monthName,
+				'StartMonth'=>$faker->randomDigit,
 				'Number'=>$faker->randomDigit
 			]);
 		}

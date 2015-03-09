@@ -37,10 +37,12 @@
                 <tr>
                     <th>Cuota a pagar</th>
                     <th>Mes a pagar</th>
+                    <th>Número</th>
                 </tr>
             </thead>
             @foreach ($cal as $index=>$value)
             <tr>
+             <td>Cuota: {{$index+1}} </td>
              <td>S/. {{$value}}</td>
              <td>{{$cuotas->ImprimirMes($mes[$index]);  }}</td>
             </tr>

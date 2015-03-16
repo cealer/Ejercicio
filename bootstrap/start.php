@@ -23,13 +23,18 @@ $app = new Illuminate\Foundation\Application;
 | given environment, then we will automatically detect it for you.
 |
 */
-
+$env = $app->detectEnvironment(function () {
+    return isset($_SERVER['LARAVEL_ENV'])
+        ? $_SERVER['LARAVEL_ENV']
+        : 'prod'; // or whatever fallback you prefer
+});
+/*
 $env = $app->detectEnvironment(array(
 
 	'local' => array('your-machine-name'),
 
 ));
-
+*/
 /*
 |--------------------------------------------------------------------------
 | Bind Paths
